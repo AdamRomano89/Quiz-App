@@ -5,7 +5,7 @@
 }
 
 .container {
-  width: 80%;
+  width: 60%;
   margin: auto;
   text-align: center;
 }
@@ -13,6 +13,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: cadetblue;
+  padding-top: 10rem;
 }
 
 h1,
@@ -58,11 +59,13 @@ h6 {
   background-color: #f5f5f5;
   padding: 15px;
   margin-bottom: 1rem;
+  display: none;
 }
 
 .quiz-app .questions {
-  background-color: #fff;
   padding: 10px;
+  text-align: left;
+  margin-bottom: 1rem;
 }
 
 .quiz-app .questions h2 {
@@ -77,6 +80,10 @@ h6 {
   margin-bottom: 0.5rem;
 }
 
+.quiz-app .answers .answer.selected-answer {
+  background-color: blue;
+}
+
 #next-question {
   width: 100%;
   display: block;
@@ -87,12 +94,14 @@ h6 {
   cursor: pointer;
   border-radius: 5px;
   margin-bottom: 1rem;
+  display: none;
 }
 
 .all-done {
   background-color: #f5f5f5;
   padding: 10px;
   margin-bottom: 1rem;
+  display: none;
 }
 
 .all-done form {
@@ -116,6 +125,7 @@ h6 {
 .final-result {
   background-color: #f5f5f5;
   padding: 10px;
+  display: none;
 }
 
 .final-result p {
