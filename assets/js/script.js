@@ -22,7 +22,7 @@ var date = moment().format("MMMM Do YYYY, h:mm:ss a");
 
 var questions = [
   {
-    question: "Mathew's father has three sons- Joseph I and Joseph II. Can you guess the name of the third son? ?",
+    question: "Mathew's father has three sons- Joseph I and Joseph II. Can you guess the name of the third son?",
     answer_1: "Joseph III",
     answer_2: "Jerin",
     answer_3: "Mathew",
@@ -52,6 +52,14 @@ var questions = [
     answer_3: "25",
     answer_4: "35",
     right: "8",
+  },
+  {
+    question: "If a leaf falls to the ground in a forest and no one hears it, does it make a sound?",
+    answer_1: "Yes",
+    answer_2: "No",
+    answer_3: "Depends on how heavy the leaf was.",
+    answer_4: "Depends on where it landed.",
+    right: "Yes",
   }
 ];
 
