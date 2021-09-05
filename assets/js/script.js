@@ -23,24 +23,24 @@ var date = moment().format("MMMM Do YYYY, h:mm:ss a");
 var questions = [
   {
     question: "What is HTML stands for?",
-    answer_1: "JS",
-    answer_2: "Hyper Text",
-    answer_3: "Css",
-    answer_4: "Coding",
-    right: "Hyper Text",
+    answer_1: "High TM Language",
+    answer_2: "Hyper Text Markup Language",
+    answer_3: "High Score Language",
+    answer_4: "Hello World Language",
+    right: "Hyper Text Markup Language",
   },
   {
     question: "What is Css stands for?",
-    answer_1: "JS",
-    answer_2: "Cascadeing Style sheet",
-    answer_3: "Css",
-    answer_4: "Coding",
-    right: "Cascadeing Style sheet",
+    answer_1: "Python Styling Sheet",
+    answer_2: "Cascadeing Style Sheet",
+    answer_3: "Styling Sheet Language",
+    answer_4: "JavaScript Styling Sheet",
+    right: "Cascadeing Style Sheet",
   },
   {
     question: "What is JS stands for?",
     answer_1: "JavaScript",
-    answer_2: "js",
+    answer_2: "jamican Source Code",
     answer_3: "Css",
     answer_4: "Coding",
     right: "JavaScript",
@@ -98,6 +98,7 @@ function addQuestions(q, questionsCount) {
       var divEl = document.createElement("div"); // <div></div>
       divEl.className = "answer";
       divEl.id = "answer_" + (i + 1);
+      divEl.dataset.answer = q["answer_" + (i + 1)];
       var answerTxt = document.createTextNode(q["answer_" + (i + 1)]);
       divEl.appendChild(answerTxt); // <div class="answer" id="answer_1">JS</div>
       answersArea.appendChild(divEl);
@@ -112,7 +113,7 @@ function addQuestions(q, questionsCount) {
     allDone.style.display = "block";
     nextQuestion.style.display = "none";
 
-    score1.innerHTML = "You answers " + score + " from " + questionsCount;
+    score1.innerHTML = "You score is " + score + " from " + questionsCount;
     clearInterval(timer);
     timerEl.innerHTML = 0;
   }
@@ -123,13 +124,16 @@ function checkAnswer(right) {
   var answer;
   for (var i = 0; i < allAnswers.length; i++) {
     if (allAnswers[i].getAttribute("class").includes("selected-answer")) {
-      answer = allAnswers[i].textContent;
+      answer = allAnswers[i].dataset.answer;
     }
   }
+  console.log("r", right);
+  console.log("a", answer);
   if (right == answer) {
+    console.log("yyyyy");
     score++;
   } else {
-    sec = sec - 3;
+    sec = sec - 20;
   }
 }
 
