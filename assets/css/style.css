@@ -45,7 +45,7 @@ h6 {
   margin-bottom: 1rem;
 }
 
-.info button, .all-done button{
+.info button, .all-done button, #next-question{
   background:#1AAB8A;
   color:#fff;
   border:none;
@@ -60,12 +60,14 @@ h6 {
   border-radius: 15px;
   margin-top: 10px;
 }
-.info button:hover , .all-done button:hover{
+.info button:hover , .all-done button:hover,
+#next-question:hover{
   background:#fff;
   color:#1AAB8A;
 }
 .info button:before,.info button:after, 
-.all-done button::before, .all-done button::after{
+.all-done button::before, .all-done button::after,
+#next-question:before, #next-question::after{
   content:'';
   position:absolute;
   top:0;
@@ -76,14 +78,16 @@ h6 {
   transition:400ms ease all;
 }
 .info button:after , 
-.all-done button::after{
+.all-done button::after,
+#next-question::after{
   right:inherit;
   top:inherit;
   left:0;
   bottom:0;
 }
 .info button:hover:before,.info button:hover:after , 
-.all-done button:hover:before, .all-done button:hover:after{
+.all-done button:hover:before, .all-done button:hover:after,
+#next-question:hover:before, #next-question:hover:after{
   width:100%;
   transition:800ms ease all;
 }
@@ -146,20 +150,7 @@ h6 {
 }
 
 .quiz-app .answers .answer.selected-answer {
-  background-color: blue;
-}
-
-#next-question {
-  width: 100%;
-  display: block;
-  padding: 10px;
-  background-color: #3045cc;
-  color: #fff;
-  border: 0;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  display: none;
+  background-color: green;
 }
 
 .all-done {
@@ -181,9 +172,8 @@ h6 {
   margin-top: 10px;
 }
 
-
 .final-result {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   padding: 10px;
   display: none;
 }
@@ -193,12 +183,13 @@ h6 {
 }
 
 .final-result button {
-  background-color: #3045cc;
+  background-color: red;
   color: #fff;
   border: 0;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 5px;
+  width: 50%;
 }
 
 .high-scores {
@@ -214,17 +205,6 @@ h6 {
   margin-bottom: 10px;
 }
 
-#go-back {
-  background-color: #3045cc;
-  color: #fff;
-  border: 0;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  display: none;
-  margin: 10px auto;
-}
-
 #go-back{
   background:#1AAB8A;
   color:#fff;
@@ -236,6 +216,11 @@ h6 {
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
+  display: none;
+  margin: 10px auto;
+  border-radius: 15px;
+  width: 100%;
+
 }
 #go-back:hover{
   background:#fff;

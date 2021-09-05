@@ -22,29 +22,37 @@ var date = moment().format("MMMM Do YYYY, h:mm:ss a");
 
 var questions = [
   {
-    question: "What is HTML stands for?",
-    answer_1: "High TM Language",
-    answer_2: "Hyper Text Markup Language",
-    answer_3: "High Score Language",
-    answer_4: "Hello World Language",
-    right: "Hyper Text Markup Language",
+    question: "Mathew's father has three sons- Joseph I and Joseph II. Can you guess the name of the third son? ?",
+    answer_1: "Joseph III",
+    answer_2: "Jerin",
+    answer_3: "Mathew",
+    answer_4: "Joseph",
+    right: "Mathew",
   },
   {
-    question: "What is Css stands for?",
-    answer_1: "Python Styling Sheet",
-    answer_2: "Cascadeing Style Sheet",
-    answer_3: "Styling Sheet Language",
-    answer_4: "JavaScript Styling Sheet",
-    right: "Cascadeing Style Sheet",
+    question: "How many months have 28 days??",
+    answer_1: "2",
+    answer_2: "1",
+    answer_3: "All of them.",
+    answer_4: "Depends if there's a leap year or not.",
+    right: "All of them.",
   },
   {
-    question: "What is JS stands for?",
-    answer_1: "JavaScript",
-    answer_2: "jamican Source Code",
-    answer_3: "Css",
-    answer_4: "Coding",
-    right: "JavaScript",
+    question: "The answer is really big.",
+    answer_1: "THE ANSWER.",
+    answer_2: "Really big.",
+    answer_3: "An elephant",
+    answer_4: "The date given is insufficient.",
+    right: "THE ANSWER.",
   },
+  {
+    question: "A farmer has 17 sheep, all of them but 8 die. How many sheep are still standing?",
+    answer_1: "8",
+    answer_2: "9",
+    answer_3: "25",
+    answer_4: "35",
+    right: "8",
+  }
 ];
 
 // JSON => JavaSCript Object Notation
@@ -189,7 +197,7 @@ function showFinalScreen() {
     "<strong>" +
     theValueOfInput +
     "</strong>" +
-    " and your score is " +
+    " and you scored " +
     "<strong>" +
     score +
     "</strong>" +
