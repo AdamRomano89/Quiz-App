@@ -72,12 +72,44 @@ h6 {
   margin-bottom: 0;
 }
 
+.quiz-app .answers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .quiz-app .answers .answer {
-  width: 35%;
+  width: 48%;
   background-color: coral;
   color: #fff;
   padding: 10px;
+  cursor: pointer;
   margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.quiz-app .answers .answer.disabled {
+  opacity: 0.7;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.quiz-app .answers .answer span.correct {
+  position: absolute;
+  background-color: green;
+  color: #fff;
+  padding: 5px;
+  top: -20px;
+  left: 0;
+}
+
+.quiz-app .answers .answer span.incorrect {
+  position: absolute;
+  background-color: red;
+  color: #fff;
+  padding: 5px;
+  top: -20px;
+  left: 0;
 }
 
 .quiz-app .answers .answer.selected-answer {
@@ -104,16 +136,16 @@ h6 {
   display: none;
 }
 
-.all-done form {
+.all-done  {
   margin-top: 15px;
 }
 
-.all-done form input,
-.all-done form button {
+.all-done input,
+.all-done button {
   height: 30px;
 }
 
-.all-done form button {
+.all-done button {
   background-color: #3045cc;
   color: #fff;
   border: 0;
@@ -139,4 +171,28 @@ h6 {
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.high-scores {
+  padding: 10px;
+  background-color: #f5f5f5;
+  display: none;
+}
+
+.high-scores span {
+  display: block;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#go-back {
+  background-color: #3045cc;
+  color: #fff;
+  border: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: none;
+  margin: 10px auto;
 }

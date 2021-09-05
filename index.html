@@ -10,8 +10,8 @@
   <body>
     <div class="container">
       <div class="top-header">
-        <h3>View High Scores</h3>
-        <span class="timer">00:00</span>
+        <a href="#">View High Scores</a>
+        <span class="timer"></span>
       </div>
 
       <div class="info">
@@ -21,36 +21,34 @@
       </div>
 
       <div class="quiz-app">
-        <div class="questions">
-          <h2>What is HTML Stands for ?</h2>
-        </div>
-        <div class="answers">
-          <div class="answer" id="answer_1">JS</div>
-          <div class="answer" id="answer_2">Hyper Text</div>
-          <div class="answer" id="answer_3">CSS</div>
-          <div class="answer" id="answer_4">Coding</div>
-        </div>
+        <div class="questions"></div>
+        <div class="answers"></div>
       </div>
       <button id="next-question">Next</button>
 
       <div class="all-done">
         <h2>All done</h2>
         <p class="score">You answered 10 from 20</p>
-        <form>
-          <label for="">Enter Your name</label>
-          <input type="text" id="enterName" placeholder="Enter your name" />
-          <button type="submit" id="submit-form">Submit</button>
-        </form>
+        <label for="">Enter Your name</label>
+        <input type="text" id="enterName" placeholder="Enter your name" />
+        <button type="submit" id="submit-form">Submit</button>
       </div>
 
       <div class="final-result">
         <h2>High Score</h2>
-        <p>Your Name : 20</p>
-        <button id="go-back">Go Back</button>
+        <p class="final-score"></p>
         <button id="clear">Clear High Score</button>
       </div>
-    </div>
 
+      <div class="high-scores">
+        <span> Score : 10</span>
+        <span> Score : 100</span>
+        <span> Score : 200</span>
+      </div>
+      <button id="go-back">Go Back</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
