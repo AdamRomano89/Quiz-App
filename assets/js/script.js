@@ -42,7 +42,7 @@ var questions = [
     answer_1: "THE ANSWER.",
     answer_2: "Really big.",
     answer_3: "An elephant",
-    answer_4: "The date given is insufficient.",
+    answer_4: "The data given is insufficient.",
     right: "THE ANSWER.",
   },
   {
