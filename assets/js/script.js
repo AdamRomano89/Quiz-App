@@ -201,15 +201,16 @@ function showFinalScreen() {
   finalResults.style.display = "block";
   goBackBtn.style.display = "block";
   score2.innerHTML =
-    "Your name is " +
+    "Hi " +
     "<strong>" +
-    theValueOfInput +
+    theValueOfInput+
+    "!"+
     "</strong>" +
-    " and you scored " +
+    " you got " +
     "<strong>" +
     score +
     "</strong>" +
-    " on " +
+    " /5 correct on " +
     "<strong>" +
     date +
     "</strong>";
